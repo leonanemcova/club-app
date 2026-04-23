@@ -1,27 +1,95 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
 
 :root {
-  --blue:       #002FB9;
-  --blue-light: #EFF6FF;
-  --sidebar:    #0F172A;
-  --border:     #E2E8F0;
-  --text:       #0F172A;
-  --text-sub:   #64748B;
-  --text-muted: #94A3B8;
-  --bg:         #F8F9FC;
+--ink:    #0A0A0F;
+--paper:  #F5F3EE;
+--accent: #FF4D1C;
+--blue:   #0038FF;
+--muted:  #8A8880;
+--border: rgba(10,10,15,0.10);
 }
 
-* { box-sizing: border-box; }
-
-::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: #F1F5F9; }
-::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+body {
+background: var(--paper);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+overflow-x: hidden;
 }
 
-.spin { animation: spin 1s linear infinite; }
+/* NAV */
+.nav {
+position: sticky;
+top: 0;
+z-index: 50;
+display: flex;
+justify-content: space-between;
+padding: 18px 40px;
+background: rgba(245,243,238,.88);
+backdrop-filter: blur(14px);
+border-bottom: 1px solid var(--border);
+}
+
+.logo {
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
+}
+
+.logo-mark {
+width:32px;
+height:32px;
+border-radius:8px;
+background: var(--ink);
+display:flex;
+align-items:center;
+justify-content:center;
+color:#FFD600;
+font-weight:800;
+}
+
+.logo-name {
+font-family:'Syne',sans-serif;
+font-weight:800;
+font-size:13px;
+letter-spacing:.1em;
+}
+
+/* HERO */
+.hero {
+max-width:1100px;
+margin:0 auto;
+padding:72px 40px;
+}
+
+.h1 {
+font-family:'Syne',sans-serif;
+font-size:60px;
+font-weight:800;
+}
+
+.lead {
+color:var(--muted);
+margin-top:20px;
+}
+
+/* BUTTONS */
+.btn-primary {
+background: var(--accent);
+color: white;
+padding: 12px 24px;
+border-radius: 10px;
+text-decoration: none;
+}
+
+.btn-outline {
+border:1px solid var(--border);
+padding:12px 24px;
+border-radius:10px;
+}

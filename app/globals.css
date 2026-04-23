@@ -1,3 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue:       #002FB9;
+  --blue-light: #EFF6FF;
+  --sidebar:    #0F172A;
+  --border:     #E2E8F0;
+  --text:       #0F172A;
+  --text-sub:   #64748B;
+  --text-muted: #94A3B8;
+  --bg:         #F8F9FC;
+}
+
+* { box-sizing: border-box; }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #F1F5F9; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.spin { animation: spin 1s linear infinite; }
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
 
 *, *::before, *::after {
